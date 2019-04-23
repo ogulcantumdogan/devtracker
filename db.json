@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "firstName": "Deneme",
+      "lastName": "Test"
+    },
+    {
+      "id": 1,
+      "firstName": "Update",
+      "lastName": "Deneme"
+    },
+    {
+      "firstName": "Update2",
+      "lastName": "Deneme",
+      "eMail": "updatedenemesi@hotmail.com",
+      "password": null,
+      "id": 2
+    }
+  ],
+  "devs": [
+    {
+      "id": 0,
+      "firstName": "Örnek",
+      "lastName": "Dev",
+      "titleId": 1,
+      "supervisorId": 0,
+      "teamId": 1
+    }
+  ],
+  "projects": [{
+    "id": 0,
+    "name": "selamproje",
+    "startDate": "29.03.1999",
+    "endDate": "13.12.1999"
+  }]
+}

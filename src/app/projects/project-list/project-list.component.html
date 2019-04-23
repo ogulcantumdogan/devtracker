@@ -1,0 +1,25 @@
+
+<div class="container">
+  <h2 id="projectsListHeader">Projects List</h2>
+  <div class="row" >
+    <button mat-fab id="createProjectButton" routerLink= "create" matTooltip="Add Project">+</button>
+  </div>
+
+  <div id= "accordion" class="col-xs-10 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <mat-accordion multi="true" *ngIf="projects.length > 0">
+  <mat-expansion-panel *ngFor="let project of projects" >
+    <mat-expansion-panel-header >
+    {{project.name}}
+    </mat-expansion-panel-header >
+    <p>Start Date: {{project.startDate}}
+    </p>
+    <p> End Date: {{project.endDate}} </p>
+    <mat-action-row>
+        <!-- <button mat-button color="primary" [routerLink]="'/users/edit/' + project.id">Düzenle</button> -->
+        <!-- <button mat-button color="warn" (click)="onDelete(project.id)">Sil</button> -->
+      </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="info-text mat-body-1" *ngIf="projects.length == 0">proje yok daha</p>
+  </div>
+</div>

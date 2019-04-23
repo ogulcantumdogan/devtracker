@@ -1,0 +1,51 @@
+<h2 id="createUserHeader">Create User</h2>
+<mat-card>
+  <form (ngSubmit) = "onAddUser(userForm)" #userForm="ngForm">
+    <mat-form-field>
+      <input matInput
+      type="text"
+      placeholder="Ad"
+      name="firstName"
+      ngModel
+      required
+      minlength="2"
+      #firstNameMarker="ngModel"><mat-error *ngIf="firstNameMarker.invalid">En az 2 karakter giriniz</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput
+      type="text"
+      placeholder="Soyad"
+      name="lastName"
+      ngModel
+      required
+      minlength="2"
+      #lastNameMarker="ngModel"><mat-error *ngIf="lastNameMarker.invalid">En az 2 karakter giriniz</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput
+      type="text"
+      placeholder="E-mail"
+      name="email"
+      ngModel
+      email
+      required
+      [pattern]="emailPattern"
+      minlength="5"
+      #emailMarker><mat-error *ngIf="emailMarker.invalid">Geçerli bir e-posta giriniz</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput
+        type="password"
+        placeholder="Parola"
+        name="password"
+        ngModel
+        required
+        minlength="8"
+        maxlength="64"
+        #passwordMarker="ngModel"><mat-error *ngIf="passwordMarker.invalid">Parolanız 8-64 karakter arasında olmalı</mat-error>
+      </mat-form-field>
+    <button mat-raised-button
+    color="primary" type="submit" [disabled]="!userForm.valid"
+    >Kaydet</button>
+  </form>
+</mat-card>

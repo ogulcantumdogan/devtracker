@@ -1,0 +1,27 @@
+:host{
+  display:block;
+  margin-top: 1rem;
+}
+
+.info-text{
+  text-align: center;
+}
+
+#createUserButton {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 22px;
+  float: right;
+}
+
+#accordion{
+  clear:both;
+}
+
+#usersListHeader{
+  width: 10%;
+  margin: 0 auto;
+  margin-top: 1vh;
+
+}
