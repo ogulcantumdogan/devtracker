@@ -1,5 +1,7 @@
 # Devtracker
 
+Employee tracking and planning software as a thesis project. Being developed using Angular 7
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.2.
 
 ## Development server
